@@ -1,24 +1,56 @@
-# README
+# bank-app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> Bank Application with Rails 5 + haml + API + Revealing Pattern + Command Pattern
 
-Things you may want to cover:
+## Table of contents
+* [General info](#general-info)
+* [Screenshots](#screenshots)
+* [Technologies](#technologies)
+* [Setup](#setup)
+* [Features](#features)
+* [Status](#status)
+* [Inspiration](#inspiration)
+* [Contact](#contact)
 
-* Ruby version
+## General info
+It's a simple banking application written in Rails 5 from scratch where a user can perform withdrawals and deposit transactions. The purpose is to document the current practices in terms of organizing javascript, api code (Rails) and command patterns for business rules.
 
-* System dependencies
+Entry assumes that one has working knowledge with Rails (generating models/migrations, relationships) and jquery.
 
-* Configuration
+## Screenshots
+![Example screenshot](./img/screenshot.png)
 
-* Database creation
+## Technologies
+* Ruby on Rails 5
+* HAML
+* jQuery
+* Sqlite
 
-* Database initialization
+## Setup
 
-* How to run the test suite
+ ```
+ bundle install
+ ```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Code Examples
+Show examples of usage:
+`put-your-code-here`
 
-* Deployment instructions
+## Features
+List of features ready and TODOs for future development
+* Awesome feature 1
+* Awesome feature 2
+* Awesome feature 3
 
-* ...
+To-do list:
+* Wow improvement to be done 1
+* Wow improvement to be done 2
+
+## Status
+Project is: _in progress_, _finished_, _no longer continue_ and why?
+
+## Inspiration
+Project inspired by devlogs youtube videos
+
+## Contact
+Created by [@lapinskap](https://www.facebook.com/paulina.lapinska99) - feel free to contact me!
