@@ -33,8 +33,22 @@ Entry assumes that one has working knowledge with Rails (generating models/migra
  ```
 
 ## Code Examples
-Show examples of usage:
-`put-your-code-here`
+#### HAML example
+```html
+<div class="container">
+ <div class="row">
+  <div class="col-md-12"></div>
+ </div>
+</div>
+
+%div.container
+ %div.row
+  %div.col-md-12
+
+.container
+ .row
+  .col-md-12
+```
 
 ## Features
 List of features ready and TODOs for future development
