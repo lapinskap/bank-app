@@ -1,0 +1,25 @@
+%h1
+ Account Number: #{@bank_account.account_number}
+ %small
+  #{@bank_account.client}
+
+= button_tag :new_transaction, id: "btn-transaction", class: "btn btn-primary" do
+ New Transaction
+
+%table.table.table-bordered
+ %thead
+  %tr
+   %th Date of Transaction
+   %th Transaction Type
+   %th Amount
+ %tbody
+  - @bank_account.account_transactions.each do |t|
+   %tr 
+    %td  #{t.created_at}
+    %td #{t.transaction_type}
+    %td #{number_to_currency(t.amount, unit: "$")}
+  %tr
+   %th 
+   %th Balance
+   %th #{number_to_currency(@bank_account.balance, unit: "$")}
+    

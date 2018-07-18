@@ -7,6 +7,8 @@ class BankAccount < ApplicationRecord
 
   before_validation :load_defaults
   
+  has_many :account_transactions
+
   def to_s
     account_number
   end

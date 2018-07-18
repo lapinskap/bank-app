@@ -4,6 +4,6 @@ class BankAccountsController < ActionController::Base
     end
 
     def show
-        @bank_account = BankAccounts.find(params[:id])
+        @bank_account = BankAccount.find(params[:id])
     end
 end
