@@ -51,6 +51,7 @@ Entry assumes that one has working knowledge with Rails (generating models/migra
  exit
  ```
 > `client: client` <- client name defined while creating a client
+
 > default balance is $0.00
 
 ## Code Examples
