@@ -1,6 +1,6 @@
 class BankAccountsController < ActionController::Base
     def index
-        @bank_account = BankAccounts.all
+        @bank_accounts = BankAccount.all
     end
 
     def show
