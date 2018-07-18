@@ -15,8 +15,6 @@
 ## General info
 It's a simple banking application written in Rails 5 from scratch where a user can perform withdrawals and deposit transactions. The purpose is to document the current practices in terms of organizing javascript, api code (Rails) and command patterns for business rules.
 
-Entry assumes that one has working knowledge with Rails (generating models/migrations, relationships) and jquery.
-
 ## Screenshots
 ![Example screenshot](./img/screenshot.png)
 
@@ -29,8 +27,30 @@ Entry assumes that one has working knowledge with Rails (generating models/migra
 ## Setup
 
  ```
+ git clone https://github.com/lapinskap/bank-app
+ cd bank-app
  bundle install
+ rails s
  ```
+ 
+ Add a client:
+ ```
+ rails console
+ Client.create!(first_name: "Juan", middle_name: "Pablo", last_name: "Fernandez", client_number: "42034823") 
+ client = Client.last
+ exit
+ ```
+ > Rails model will change clients name to uppercase 
+ 
+ Create Bank Account:
+ ```
+ rails console
+ BankAccount.create!(client: client, account_number: "000000001")
+ exit
+ ```
+> `client: client` <- client name defined while creating a client
+
+> default balance is $0.00
 
 ## Code Examples
 #### HAML example
