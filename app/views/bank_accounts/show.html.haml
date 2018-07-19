@@ -27,7 +27,7 @@
    %th Balance
    %th #{number_to_currency(@bank_account.balance, unit: "$")}
     
-
+#parameters{ data: { bank_account_id: @bank_account.id } }
 #modal-transaction.modal.fade.modal-fade
  .modal-dialog
   .modal-content
