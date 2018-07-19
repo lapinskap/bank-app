@@ -33,7 +33,7 @@ It's a simple banking application written in Rails 5 from scratch where a user c
  $ bundle install
  $ rails s
  ```
- #### Operations in terminal
+ ### Operations in terminal
  
  Add a client:
  ```
