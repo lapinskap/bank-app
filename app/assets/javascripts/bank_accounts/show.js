@@ -3,14 +3,19 @@ var Show = (function() {
     var $modalTransaction;
     var $btnSave;
     var inputAmount;
+    var selectTransactionType;
 
     var fetchElements = function() {
         $btnNewTransaction = $("#btn-new-transaction");
+        $modalTransaction = $("#modal-transaction");
+        $btnSave = $("#btn-save");
+        $inputAmount = $("#input-amount");
+        $selectTransactionType = $("#select-transaction-type");
     };
 
     var initializeEvents = function() {
         $btnNewTransaction.on("click", function() {
-            alert("hello world!");
+            $modalTransaction.modal("show");
         });
     };
 
