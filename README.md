@@ -45,9 +45,9 @@ It's a simple banking application written in Rails 5 from scratch where a user c
  
  Create Bank Account:
  ```
- rails console
- BankAccount.create!(client: client, account_number: "000000001")
- exit
+ $ rails console
+ $ BankAccount.create!(client: client, account_number: "000000001")
+ $ exit
  ```
 > `client: client` <- client name defined while creating a client
 
@@ -73,19 +73,16 @@ It's a simple banking application written in Rails 5 from scratch where a user c
 
 ## Features
 List of features ready and TODOs for future development
-* Awesome feature 1
-* Awesome feature 2
-* Awesome feature 3
 
 To-do list:
-* Wow improvement to be done 1
-* Wow improvement to be done 2
+* Add styles!
+* Fix ajax bugs!
 
 ## Status
 Project is: _in progress_
 
 ## Inspiration
-Project inspired by devlogs youtube videos
+Project inspired by devlogs youtube videos and rails documentation
 
 ## Contact
 Created by [@lapinskap](https://www.facebook.com/paulina.lapinska99) - feel free to contact me!
