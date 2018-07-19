@@ -16,7 +16,8 @@
 It's a simple banking application written in Rails 5 from scratch where a user can perform withdrawals and deposit transactions. The purpose is to document the current practices in terms of organizing javascript, api code (Rails) and command patterns for business rules.
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
+![Example screenshot](https://raw.githubusercontent.com/lapinskap/bank-app/master/img/scr%20-%20Copy.jpg)
+![Example screenshot](https://raw.githubusercontent.com/lapinskap/bank-app/master/img/scr.jpg)
 
 ## Technologies
 * Ruby on Rails 5
@@ -27,20 +28,20 @@ It's a simple banking application written in Rails 5 from scratch where a user c
 ## Setup
 
  ```
- git clone https://github.com/lapinskap/bank-app
- cd bank-app
- bundle install
- rails s
+ $ git clone https://github.com/lapinskap/bank-app
+ $ cd bank-app
+ $ bundle install
+ $ rails s
  ```
  
  Add a client:
  ```
- rails console
- Client.create!(first_name: "Juan", middle_name: "Pablo", last_name: "Fernandez", client_number: "42034823") 
- client = Client.last
- exit
+ $ rails console
+ $ Client.create!(first_name: "Juan", middle_name: "Pablo", last_name: "Fernandez", client_number: "42034823") 
+ $ client = Client.last
+ $ exit
  ```
- > Rails model will change clients name to uppercase 
+ > Rails model will change clients name to uppercase letters
  
  Create Bank Account:
  ```
