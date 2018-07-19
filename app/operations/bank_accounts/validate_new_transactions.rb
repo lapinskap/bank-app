@@ -1,7 +1,7 @@
 module BankAccounts
     class ValidateNewTransaction
         def initialize(amount: , transaction_type: , bank_account_id: )
-            @amount = amount 
+            @amount = amount.try(:to_f) 
             @transaction_type = transaction_type
             @bank_account_id = bank_account_id
             @bank_account = BankAccount.where(id: @bank_account_id).first

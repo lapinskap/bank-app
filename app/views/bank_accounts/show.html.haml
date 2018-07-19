@@ -1,4 +1,4 @@
-%script{:crossorigin => "anonymous", :integrity => "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo", :src => "https://code.jquery.com/jquery-3.3.1.slim.min.js"}
+%script{:src => "https://code.jquery.com/jquery-3.2.1.min.js"}
 %script{:crossorigin => "anonymous", :integrity => "sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49", :src => "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"}
 %script{:crossorigin => "anonymous", :integrity => "sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em", :src => "https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"}
 %link{:crossorigin => "anonymous", :href => "https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css", :integrity => "sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B", :rel => "stylesheet"}/
@@ -37,16 +37,19 @@
       %i.fa.fa-close
      %span.sr-only Close
     .row
-     .col-lg-12
+     .col-md-12
       %h4.modal-title
      New Transaction
    .modal-body
     .row
-     .col-lg-6
+     .col-md-12
+      .notification
+    .row
+     .col-md-6
       %label
        Amount
        = text_field_tag :amount, 0.00, id: "input-amount", class: "form-control"
-     .col-lg-6
+     .col-md-6
       %label
        Transaction Type
        = select_tag :transaction_type, options_for_select(AccountTransaction::TRANSACTION_TYPES), id: "select-transaction-type", class: "form-control"

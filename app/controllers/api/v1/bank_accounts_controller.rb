@@ -1,6 +1,8 @@
 module Api 
     module V1 
         class BankAccountsController < ApplicationController
+            skip_before_action :verify_authenticity_token
+
             def new_transaction
                 amount = params[:amount]
                 transaction_type = params[:transaction_type]
@@ -20,7 +22,7 @@ module Api
                         transaction_type: transaction_type,
                         bank_account_id: bank_account_id
                     ).execute!
-                    
+
                     render json: { balance: bank_account.balance }
                 end
             end
