@@ -33,6 +33,8 @@ It's a simple banking application written in Rails 5 from scratch where a user c
  $ bundle install
  $ rails s
  ```
+ #### Operations with
+ console
  
  Add a client:
  ```
@@ -73,6 +75,8 @@ It's a simple banking application written in Rails 5 from scratch where a user c
 
 ## Features
 List of features ready and TODOs for future development
+* HAML files
+* Ajax calls 
 
 To-do list:
 * Add styles!
