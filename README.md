@@ -58,6 +58,11 @@ It's a simple banking application written in Rails 5 from scratch where a user c
 ```
 $ rails console
 $ AccountTransaction.destroy_all
+```
+or delete last transaction:
+
+```
+$ AccountTransaction.last.destroy!
 $ exit
 
 $ rails s
