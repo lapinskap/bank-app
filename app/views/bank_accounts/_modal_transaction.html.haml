@@ -1,0 +1,28 @@
+#modal-transaction.modal.fade.modal-fade
+ .modal-dialog
+  .modal-content
+   .modal-header
+    %button.close{type:'button', data:{dismiss:'modal'}}
+     %span{aria:{hidden:'true'}}
+      %i.fa.fa-close
+     %span.sr-only Close
+    .row
+     .col-md-12
+      %h4.modal-title
+     New Transaction
+   .modal-body
+    .row
+     .col-md-12
+      .notification
+    .row
+     .col-md-6
+      %label
+       Amount
+       = text_field_tag :amount, 0.00, id: "input-amount", class: "form-control"
+     .col-md-6
+      %label
+       Transaction Type
+       = select_tag :transaction_type, options_for_select(AccountTransaction::TRANSACTION_TYPES), id: "select-transaction-type", class: "form-control"
+     .modal-footer
+      %button.btn.btn-default{type:'button', data:{dismiss:'modal'}} Close
+      %button.btn#btn-save.btn-primary{type:'button'} Save

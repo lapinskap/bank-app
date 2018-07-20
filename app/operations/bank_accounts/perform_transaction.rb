@@ -1,7 +1,7 @@
 module BankAccounts
     class PerformTransaction
         def initialize(amount: , transaction_type: , bank_account_id: )
-            @amount = amount.to_i 
+            @amount = amount.to_f
             @transaction_type = transaction_type
             @bank_account_id = bank_account_id
             @bank_account = BankAccount.where(id: @bank_account_id).first
@@ -15,9 +15,9 @@ module BankAccounts
             )
 
             if @transaction_type == "withdraw"
-                @bank_account.update!(balance: @bank_account.balance.to_i - @amount)
+                @bank_account.update!(balance: @bank_account.balance.to_f - @amount)
             elsif @transaction_type == "deposit" 
-                @bank_account.update!(balance: @bank_account.balance.to_i + @amount)
+                @bank_account.update!(balance: @bank_account.balance.to_f + @amount)
             end
             
             @bank_account

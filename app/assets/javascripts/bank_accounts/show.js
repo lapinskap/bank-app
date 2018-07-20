@@ -65,6 +65,7 @@ var Show = (function() {
                 }, 
                 error: function(response) {
                     $notification.html( JSON.parse(response.responseText).errors.join());
+                    enableControls();
                 }
             });
         });
