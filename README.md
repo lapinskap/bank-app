@@ -54,6 +54,15 @@ It's a simple banking application written in Rails 5 from scratch where a user c
 
 > default balance is $0.00
 
+Delete history of transactions: 
+```
+$ rails console
+$ AccountTransaction.destroy_all
+$ exit
+
+$ rails s
+```
+
 ## Code Examples
 #### HAML example
 ```html
