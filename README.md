@@ -15,6 +15,8 @@
 ## General info
 It's a simple banking application written in Rails 5 from scratch where a user can perform withdrawals and deposit transactions. The purpose is to document the current practices in terms of organizing javascript, api code (Rails) and command patterns for business rules.
 
+Bank account belongs to a client, a client can have many bank accounts.
+
 ## Screenshots
 ![Example screenshot](https://raw.githubusercontent.com/lapinskap/bank-app/master/img/scr%20-%20Copy.jpg)
 ![Example screenshot](https://raw.githubusercontent.com/lapinskap/bank-app/master/img/scr.jpg)
@@ -58,6 +60,11 @@ It's a simple banking application written in Rails 5 from scratch where a user c
 ```
 $ rails console
 $ AccountTransaction.destroy_all
+```
+or delete last transaction:
+
+```
+$ AccountTransaction.last.destroy!
 $ exit
 
 $ rails s
