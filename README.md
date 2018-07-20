@@ -35,7 +35,7 @@ It's a simple banking application written in Rails 5 from scratch where a user c
  ```
  ### Operations in terminal
  
- Add a client:
+ #### Add a client:
  ```
  $ rails console
  $ Client.create!(first_name: "Juan", middle_name: "Pablo", last_name: "Fernandez", client_number: "42034823") 
@@ -44,7 +44,7 @@ It's a simple banking application written in Rails 5 from scratch where a user c
  ```
  > Rails model will change clients name to uppercase letters
  
- Create Bank Account:
+ #### Create Bank Account:
  ```
  $ rails console
  $ BankAccount.create!(client: client, account_number: "000000001")
@@ -53,6 +53,15 @@ It's a simple banking application written in Rails 5 from scratch where a user c
 > `client: client` <- client name defined while creating a client
 
 > default balance is $0.00
+
+#### Delete history of transactions: 
+```
+$ rails console
+$ AccountTransaction.destroy_all
+$ exit
+
+$ rails s
+```
 
 ## Code Examples
 #### HAML example
