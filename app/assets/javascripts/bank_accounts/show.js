@@ -30,7 +30,7 @@ var Show = (function() {
         $selectTransactionType.prop("disabled",true);
     };
 
-    var enableControles = function() {
+    var enableControls = function() {
         $btnSave.prop("disabled",false);
         $inputAmount.prop("disabled",false);
         $selectTransactionType.prop("disabled",false);
@@ -38,6 +38,7 @@ var Show = (function() {
 
     var initializeEvents = function() {
         $btnNewTransaction.on("click", function() {
+            enableControls();
             $modalTransaction.modal("show");
         });
         $btnSave.on("click", function () {
