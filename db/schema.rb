@@ -12,10 +12,13 @@
 
 ActiveRecord::Schema.define(version: 2018_07_18_101954) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "account_transactions", force: :cascade do |t|
     t.decimal "amount"
     t.string "transaction_type"
-    t.integer "bank_account_id"
+    t.bigint "bank_account_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "transaction_number"
@@ -23,7 +26,7 @@ ActiveRecord::Schema.define(version: 2018_07_18_101954) do
   end
 
   create_table "bank_accounts", force: :cascade do |t|
-    t.integer "client_id"
+    t.bigint "client_id"
     t.decimal "balance"
     t.string "account_number"
     t.datetime "created_at", null: false
@@ -41,4 +44,6 @@ ActiveRecord::Schema.define(version: 2018_07_18_101954) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "account_transactions", "bank_accounts"
+  add_foreign_key "bank_accounts", "clients"
 end
