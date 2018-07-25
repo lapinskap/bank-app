@@ -1,6 +1,6 @@
 # bank-app
 
-> Bank Application with Rails 5 + haml + API + Revealing Pattern + Command Pattern
+>  Ruby on Rails 5 Application with haml and API
 
 ## Table of contents
 * [General info](#general-info)
@@ -13,19 +13,22 @@
 * [Contact](#contact)
 
 ## General info
-It's a simple banking application written in Rails 5 from scratch where a user can perform withdrawals and deposit transactions. The purpose is to document the current practices in terms of organizing javascript, api code (Rails) and command patterns for business rules.
+Simple banking application written in Rails 5 where a user can perform withdrawals and deposit transactions. The purpose is to document the current practices in terms of organizing javascript, api code (Rails) and command patterns for business rules.
 
 Bank account belongs to a client, a client can have many bank accounts.
 
 ## Screenshots
 ![Example screenshot](https://raw.githubusercontent.com/lapinskap/bank-app/master/img/scr%20-%20Copy.jpg)
+
+When we click "Add new transaction" a charming Modal appears to our eyes:
+
 ![Example screenshot](https://raw.githubusercontent.com/lapinskap/bank-app/master/img/scr.jpg)
 
 ## Technologies
 * Ruby on Rails 5
 * HAML
 * jQuery
-* Sqlite
+* PostgreSQL database
 
 ## Setup
 
@@ -71,6 +74,69 @@ $ rails s
 ```
 
 ## Code Examples
+
+#### Module example
+app/models/account_transaction.rb
+```ruby
+class AccountTransaction < ApplicationRecord
+  belongs_to :bank_account
+
+  TRANSACTION_TYPES = ["withdraw","deposit"]
+
+  validates :bank_account, presence: true
+  validates :amount, presence: true, numericality: true
+  validates :transaction_number, presence: true, uniqueness: true
+  validates :transaction_type, presence: true, inclusion: { in: TRANSACTION_TYPES}
+
+  before_validation :load_defaults
+
+  def load_defaults
+    if self.new_record?
+      self.transaction_number = SecureRandom.uuid
+    end
+  end
+end
+```
+
+#### Validate new transaction 
+app/operations/bank_accounts/validate_new_transaction.rb
+```ruby
+module BankAccounts
+    class ValidateNewTransaction
+        def initialize(amount: , transaction_type: , bank_account_id: )
+            @amount = amount.try(:to_i) 
+            @transaction_type = transaction_type
+            @bank_account_id = bank_account_id
+            @bank_account = BankAccount.where(id: @bank_account_id).first
+            @errors = []
+        end
+
+        def execute!
+            validate_existence_of_account!
+
+            if @transaction_type == "withdraw" and @bank_account.present?
+                validate_withdrawal!
+            end
+            @errors
+        end
+
+        private
+
+        def validate_withdrawal!
+            if @bank_account.balance - @amount < 0.00
+                @errors << "Not enough money"
+            end
+        end
+
+        def validate_existence_of_account!
+            if @bank_account.blank?
+                @errors << "Account not found"
+            end
+
+        end
+    end
+end
+```
 #### HAML example
 ```html
 <div class="container">
@@ -95,13 +161,13 @@ List of features ready and TODOs for future development
 
 To-do list:
 * Add styles!
-* Fix ajax bugs!
+* Solve the problem with the lack of javascript precompile in heroku server
 
 ## Status
 Project is: _in progress_
 
 ## Inspiration
-Project inspired by devlogs youtube videos and rails documentation
+An idea for an application that I liked very much - Inspired by devlogs youtube videos - I decided that I want to do my own version of "simple banking app". It seems easy for me to expand in the future. 
 
 ## Contact
 Created by [@lapinskap](https://www.facebook.com/paulina.lapinska99) - feel free to contact me!
