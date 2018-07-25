@@ -1,6 +1,6 @@
 # bank-app
 
-> Bank Application with Rails 5 + haml + API + Revealing Pattern + Command Pattern
+>  Ruby on Rails 5 Application with haml and API
 
 ## Table of contents
 * [General info](#general-info)
@@ -13,7 +13,7 @@
 * [Contact](#contact)
 
 ## General info
-It's a simple banking application written in Rails 5 from scratch where a user can perform withdrawals and deposit transactions. The purpose is to document the current practices in terms of organizing javascript, api code (Rails) and command patterns for business rules.
+Simple banking application written in Rails 5 where a user can perform withdrawals and deposit transactions. The purpose is to document the current practices in terms of organizing javascript, api code (Rails) and command patterns for business rules.
 
 Bank account belongs to a client, a client can have many bank accounts.
 
