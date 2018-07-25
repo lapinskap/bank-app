@@ -101,7 +101,7 @@ To-do list:
 Project is: _in progress_
 
 ## Inspiration
-Project inspired by devlogs youtube videos and rails documentation
+An idea for an application that I liked very much - Inspired by devlogs youtube videos - I decided that I want to do my own version of "simple banking app". It seems easy for me to expand in the future. 
 
 ## Contact
 Created by [@lapinskap](https://www.facebook.com/paulina.lapinska99) - feel free to contact me!
