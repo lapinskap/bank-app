@@ -19,6 +19,9 @@ Bank account belongs to a client, a client can have many bank accounts.
 
 ## Screenshots
 ![Example screenshot](https://raw.githubusercontent.com/lapinskap/bank-app/master/img/scr%20-%20Copy.jpg)
+
+When we click "Add new transaction" a charming Modal appears to our eyes:
+
 ![Example screenshot](https://raw.githubusercontent.com/lapinskap/bank-app/master/img/scr.jpg)
 
 ## Technologies
