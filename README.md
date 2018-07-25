@@ -99,7 +99,7 @@ end
 ```
 
 #### Validate new transaction 
-operations/bank_accounts/validate_new_transaction.rb
+app/operations/bank_accounts/validate_new_transaction.rb
 ```ruby
 module BankAccounts
     class ValidateNewTransaction
