@@ -75,8 +75,8 @@ $ rails s
 
 ## Code Examples
 
+#### Module example
 app/models/account_transaction.rb
-
 ```ruby
 class AccountTransaction < ApplicationRecord
   belongs_to :bank_account
@@ -100,7 +100,7 @@ end
 
 #### Validate new transaction 
 operations/bank_accounts/validate_new_transaction.rb
-```
+```ruby
 module BankAccounts
     class ValidateNewTransaction
         def initialize(amount: , transaction_type: , bank_account_id: )
