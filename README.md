@@ -95,7 +95,7 @@ List of features ready and TODOs for future development
 
 To-do list:
 * Add styles!
-* Fix ajax bugs!
+* Solve the problem with the lack of javascript precompile in heroku server
 
 ## Status
 Project is: _in progress_
