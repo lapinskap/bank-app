@@ -28,7 +28,7 @@ When we click "Add new transaction" a charming Modal appears to our eyes:
 * Ruby on Rails 5
 * HAML
 * jQuery
-* Sqlite
+* PostgreSQL database
 
 ## Setup
 
