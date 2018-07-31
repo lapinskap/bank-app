@@ -10,6 +10,9 @@
 
 = button_tag :new_transaction, id: "btn-new-transaction", class: "btn btn-primary" do
  New Transaction
+
+= link_to bank_accounts_path, class: "btn btn-primary" do 
+ Back To Bank Accounts
  
 = render partial: "transactions", locals: { bank_account: @bank_account }
 
