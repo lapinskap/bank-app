@@ -15,6 +15,10 @@ class BankAccountsController < ActionController::Base
             render "new"
         end
     end
+
+    def edit
+        @bank_account = BankAccount.find(params[:id])
+    end
     
     def update
     end
