@@ -1,6 +1,6 @@
 # bank-app
 
->  Ruby on Rails 5 Application with haml and API
+>  Ruby on Rails 5 Application with HAML and PostgreSQL
 
 ## Table of contents
 * [General info](#general-info)
