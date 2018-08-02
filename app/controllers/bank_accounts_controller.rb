@@ -21,6 +21,13 @@ class BankAccountsController < ActionController::Base
     end
     
     def update
+        @bank_account = BankAccount.find(params[:id])
+
+        if @bank_account.update(bank_account_params)
+            redirect_to bank_account_path(@bank_account.id)
+        else
+            render "edit"
+        end
     end
 
     def destroy 
@@ -33,6 +40,7 @@ class BankAccountsController < ActionController::Base
     private
 
     def bank_account_params
+        @bank_account = BankAccount.find(params[:id])
         params.require(:bank_account).permit(:account_number, :client_id)
     end
 end

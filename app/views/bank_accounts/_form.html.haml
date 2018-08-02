@@ -1,0 +1,10 @@
+= simple_form_for @bank_account do |f|
+ = f.input :account_number, input_html: { class: "form-control" }
+ = f.association :client, input_html: { class: "form-control" }
+%hr
+= simple_form_for @bank_account do |f|
+ .form-actions
+  = f.submit class: "btn btn-primary" do
+   Save Bank Account
+  = link_to root_path, class: "btn btn-primary" do
+   Cancel
