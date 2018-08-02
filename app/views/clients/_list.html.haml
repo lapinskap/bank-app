@@ -1,0 +1,16 @@
+%table.table.table-bordered
+ %thead
+  %tr
+   %th Client Number
+   %th Name
+   %th Number of Accounts
+   %th Actions
+ %tbody
+  - clients.each do |c|
+   %tr
+    %td #{c.client_number}
+    %td #{c}
+    %td #{c.num_accounts}
+    %td
+     = link_to client_path(c.id), class: "btn btn-primary" do
+      Show

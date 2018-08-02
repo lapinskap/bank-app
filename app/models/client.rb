@@ -14,7 +14,11 @@ class Client < ApplicationRecord
         self.last_name = self.first_name.upcase
     end
 
+    def num_accounts
+        self.bank_accounts.count
+    end
+
     def to_s
-        "#{first_name}" "#{middle_name}" "#{last_name}"
+        "#{first_name} #{middle_name} #{last_name}"
     end
 end
