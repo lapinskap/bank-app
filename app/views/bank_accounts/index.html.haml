@@ -19,7 +19,9 @@
   - @bank_accounts.each do |bank_account|
    %tr 
     %td #{bank_account.account_number}
-    %td #{bank_account.client}
+    %td
+     = link_to client_path(bank_account.id) do
+      #{bank_account.client}
     %td #{number_to_currency(bank_account.balance, unit: "$")}
     %td
      = link_to bank_account_path(bank_account.id), class: "btn btn-primary" do
