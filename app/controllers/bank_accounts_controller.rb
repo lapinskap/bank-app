@@ -31,6 +31,14 @@ class BankAccountsController < ActionController::Base
     end
 
     def destroy 
+        @bank_account = BankAccount.find(params[:id])
+
+        if @bank_account.balance > 0
+            redirect_to bank_account_path(@bank_account.id)
+        else
+            @bank_account.destroy!
+            redirect_to bank_accounts_path
+        end
     end
 
     def show
@@ -40,7 +48,6 @@ class BankAccountsController < ActionController::Base
     private
 
     def bank_account_params
-        @bank_account = BankAccount.find(params[:id])
         params.require(:bank_account).permit(:account_number, :client_id)
     end
 end
