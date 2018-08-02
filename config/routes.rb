@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root to: "pages#index"
   resources :bank_accounts
+  resources :clients
 
   namespace :api do
     namespace :v1 do
