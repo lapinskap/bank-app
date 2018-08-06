@@ -18,7 +18,6 @@ Simple banking application written in Rails 5 where a user can perform withdrawa
 Bank account belongs to a client, a client can have many bank accounts.
 
 ## Screenshots
-![Example screenshot](https://raw.githubusercontent.com/lapinskap/bank-app/master/img/screen1.jpg)
 
 ![Example screenshot](https://raw.githubusercontent.com/lapinskap/bank-app/master/img/screen4.jpg)
 
