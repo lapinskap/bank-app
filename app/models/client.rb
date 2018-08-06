@@ -3,6 +3,7 @@ class Client < ApplicationRecord
     validates :last_name, presence: true
     validates :middle_name, presence: true
     validates :client_number, presence: true, uniqueness: true
+    validates_associated :content
 
     has_many :bank_accounts
     

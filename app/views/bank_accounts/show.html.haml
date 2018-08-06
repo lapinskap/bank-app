@@ -21,8 +21,10 @@
 
 = link_to bank_accounts_path, method: :delete
 
-= render partial: "modal_transaction", class: "btn btn-danger", data: { confirm: "Are you sure?"} do
- Delete Bank Account
+
+/ = render partial: "modal_transaction", class: "btn btn-danger", data: { confirm: "Are you sure?"} do
+/ Delete Bank Account
+/ this isn't working yet
 
 #parameters{ data: { bank_account_id: @bank_account.id } }
 
