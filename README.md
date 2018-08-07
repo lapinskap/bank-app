@@ -17,6 +17,8 @@ Simple banking application written in Rails 5 where a user can perform withdrawa
 
 Bank account belongs to a client, a client can have many bank accounts.
 
+I was learning how to create CRUD in Rails.
+
 ## Screenshots
 
 ![Example screenshot](https://raw.githubusercontent.com/lapinskap/bank-app/master/img/screen4.jpg)
